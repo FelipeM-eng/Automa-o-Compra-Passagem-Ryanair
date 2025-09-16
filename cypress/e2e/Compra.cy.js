@@ -58,6 +58,8 @@ describe('Compra de passagem', () => {
     //E selecionar o voo de volta
     cy.xpath("/html/body/app-root/flights-root/div/div/div/div/flights-lazy-content/flights-summary-container/flights-summary/div/div[2]/journey-container/journey/flight-list/ry-spinner/div/flight-card-new/div/div/div[4]/flight-card-summary/div/div[2]/button").click();
 
+    cy.wait(2000);
+    
     //E escolhe a tua tarifa
     cy.xpath('/html/body/app-root/flights-root/div/div/div/div/flights-lazy-content/fare-selector-container/fare-selector/div/fare-table-new-layout-container/fare-table-new-layout/table/thead/tr[2]/th[3]/div').should('be.visible').click();
 
